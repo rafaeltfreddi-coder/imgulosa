@@ -1,67 +1,80 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Minha Galeria de Imagens</title>
+
   <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
 
   <main>
+
     <h1>Minha Galeria de Imagens</h1>
 
     <div class="galeria">
 
-      <button type="button" aria-label="Ampliar Água-viva colorida">
-        <img src="imagens/img1.png" alt="Água-viva colorida">
-        <span>Água-viva colorida</span>
+      <button type="button" aria-label="Ampliar imagem 1">
+        <img
+          src="https://lh3.googleusercontent.com/drive-storage/AJQWtBNmw8cdQrqiA9DQvZoKJIwSau8j9oFS33y0cg18PL2p2elqgDJiWcjfQE1NyZEJFZVmT7PRnCY2VvbYSwEUkWdmO_2xtiZTxkgjaksgxvc33-a8=w1920-h953?auditContext=forDisplay"
+          alt="Paisagem da imagem 1">
+        <span>Imagem 1</span>
       </button>
 
-      <button type="button" aria-label="Ampliar Coala">
-        <img src="imagens/img2.png" alt="Coala">
-        <span>Coala</span>
+      <button type="button" aria-label="Ampliar imagem 2">
+        <img
+          src="https://lh3.googleusercontent.com/drive-storage/AJQWtBOAkLmdHZQiG8p33YHG3pyEE4Y5lwlcaDgfEAGpp9vqWRRKp2kMkbH2KCIMamB3cMal-tIk2acihNmoLpsuuCDwdpE_cqeIkRg_IkeZgMmu5izU=w105-h70-c"
+          alt="Paisagem da imagem 2">
+        <span>Imagem 2</span>
       </button>
 
-      <button type="button" aria-label="Ampliar Deserto">
-        <img src="imagens/img3.png" alt="Deserto">
-        <span>Deserto</span>
+      <button type="button" aria-label="Ampliar imagem 3">
+        <img
+          src="https://lh3.googleusercontent.com/drive-storage/AJQWtBM0HBg5UqMCGvZhpq2M5ZRWwKn91XPMa-MzjrutOFYLnBI7EFDEVg2g6aHyJqPgkbatGn2dMb6ekxAx7GaHo4wNlV0H5AWlogtBfMFow8TE_Rj4=w105-h70-c"
+          alt="Paisagem da imagem 3">
+        <span>Imagem 3</span>
       </button>
 
-      <button type="button" aria-label="Ampliar Flores no lago">
-        <img src="imagens/img4.png" alt="Flores no lago">
-        <span>Flores no lago</span>
+      <button type="button" aria-label="Ampliar imagem 4">
+        <img
+          src="https://lh3.googleusercontent.com/drive-storage/AJQWtBMMCf49mDK7LmbRn7Kr8982_kmoS9ZG2VUiIknkAF8HjxTQnTON2swpBuuF-EFZM4xMrqc_KTfYsvpwPwXDSq62el9E-_3a6hhJPuHAmfoPg98B=w105-h70-c"
+          alt="Paisagem da imagem 4">
+        <span>Imagem 4</span>
       </button>
 
-      <button type="button" aria-label="Ampliar Casas no lago">
-        <img src="imagens/img5.png" alt="Casas no lago">
-        <span>Casas no lago</span>
+      <button type="button" aria-label="Ampliar imagem 5">
+        <img
+          src="https://lh3.googleusercontent.com/drive-storage/AJQWtBObMMybhlPdHeX0K-0IUl0pX7sW0Vr5eaoE93RF90LupFDyOVTiTnOBHl9e4QZYr8P-t76ERJEik5-UjLVtvaysVCTlqIYN_gFNtZ1a5hJWOIKV=w105-h70-c"
+          alt="Paisagem da imagem 5">
+        <span>Imagem 5</span>
       </button>
 
-      <button type="button" aria-label="Ampliar Rio na floresta">
-        <img src="imagens/img6.png" alt="Rio na floresta">
-        <span>Rio na floresta</span>
-      </button>
-
-      <button type="button" aria-label="Ampliar Montanhas">
-        <img src="imagens/img7.png" alt="Montanhas">
-        <span>Montanhas</span>
-      </button>
-
-      <button type="button" aria-label="Ampliar Pôr do sol">
-        <img src="imagens/img8.png" alt="Pôr do sol">
-        <span>Pôr do sol</span>
+      <button type="button" aria-label="Ampliar imagem 6">
+        <img
+          src="https://lh3.googleusercontent.com/drive-storage/AJQWtBO3QOLgEllCDLRR8WpHaZTJnHzA_1SVM9_zpsvrHcEgWr3K7kOQBqeayng3FytcuTaCE63-kYaqLCt_rT_bojpLzikStOJFecsHjoq6BfuJrcsh=w105-h70-c"
+          alt="Paisagem da imagem 6">
+        <span>Imagem 6</span>
       </button>
 
     </div>
+
   </main>
 
+  <!-- Janela para ampliar as imagens -->
+
   <dialog class="ampliacao" aria-label="Imagem ampliada">
-    <button class="fechar" type="button" aria-label="Fechar">
+
+    <button class="fechar" type="button" aria-label="Fechar imagem">
       &times;
     </button>
+
     <img class="imagem-ampliada" alt="">
+
   </dialog>
 
   <script src="script.js"></script>
