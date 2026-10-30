@@ -6,16 +6,32 @@
 body {
   margin: 0;
   min-height: 100vh;
-  padding: 30px;
-  background: #172033;
+  padding: 30px 15px;
+
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-nJB1vX_SGV6x-IC2O3RlVFmucaePTWKXIl96GOhAlg&s=10");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   text-align: center;
 }
 
 h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 32px;
+  text-shadow: 2px 2px 5px black;
+}
+
+.subtitulo {
   margin-bottom: 30px;
-  color: #ffffff;
+  color: white;
+  font-size: 16px;
+  text-shadow: 1px 1px 4px black;
 }
 
 .galeria {
@@ -30,10 +46,14 @@ h1 {
   width: 200px;
   height: 230px;
   padding: 0;
-  border: none;
+
+  border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 25px;
-  background: #26344d;
-  box-shadow: 0 4px 12px #0006;
+
+  background: rgba(20, 20, 30, 0.85);
+
+  box-shadow: 0 4px 12px #0008;
+
   overflow: hidden;
   cursor: zoom-in;
 }
@@ -41,24 +61,34 @@ h1 {
 .galeria img {
   display: block;
   width: 100%;
-  height: 190px;
+  height: 185px;
+
   object-fit: cover;
-  opacity: 0.6;
-  border-radius: 25px;
+
+  opacity: 0.75;
+
+  border-radius: 22px;
+
   transition: opacity 0.3s, transform 0.3s;
 }
 
 .galeria span {
   display: block;
-  padding: 8px;
+  padding: 10px;
+
   color: white;
   font-size: 14px;
+  font-weight: bold;
 }
 
 @media (hover: hover) {
   .galeria button:hover img {
     opacity: 1;
     transform: scale(1.05);
+  }
+
+  .galeria button:hover {
+    border-color: white;
   }
 }
 
@@ -71,17 +101,24 @@ h1 {
   opacity: 1;
 }
 
+/* Janela de ampliação */
+
 .ampliacao {
   position: fixed;
   inset: 0;
+
   width: 100%;
   height: 100%;
+
   max-width: none;
   max-height: none;
+
   margin: 0;
   padding: 24px;
+
   border: none;
   background: transparent;
+
   cursor: zoom-out;
 }
 
@@ -96,30 +133,50 @@ h1 {
 }
 
 .imagem-ampliada {
+  display: block;
+
   max-width: 100%;
   max-height: 85vh;
+
   object-fit: contain;
+
   border-radius: 25px;
+
   box-shadow: 0 8px 30px #0008;
 }
+
+/* Botão de fechar */
 
 .fechar {
   position: absolute;
   top: 15px;
   right: 15px;
+
   width: 45px;
   height: 45px;
+
   border: none;
   border-radius: 50%;
+
   background: white;
   color: black;
+
   font-size: 30px;
   cursor: pointer;
 }
 
+.fechar:focus-visible {
+  outline: 3px solid #60a5fa;
+  outline-offset: 3px;
+}
+
+/* Bloqueia a rolagem ao ampliar */
+
 body.imagem-aberta {
   overflow: hidden;
 }
+
+/* Tablets */
 
 @media (max-width: 900px) {
   .galeria {
@@ -127,10 +184,21 @@ body.imagem-aberta {
   }
 }
 
+/* Celulares */
+
 @media (max-width: 500px) {
+  body {
+    padding: 15px 10px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
   .galeria {
     grid-template-columns: repeat(2, 130px);
     gap: 12px;
+    padding: 10px;
   }
 
   .galeria button {
@@ -139,9 +207,16 @@ body.imagem-aberta {
   }
 
   .galeria img {
-    height: 125px;
+    height: 120px;
+  }
+
+  .galeria span {
+    padding: 8px;
+    font-size: 12px;
   }
 }
+
+/* Telas muito pequenas */
 
 @media (max-width: 300px) {
   .galeria {
