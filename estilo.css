@@ -1,0 +1,150 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 30px;
+  background: #172033;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.galeria button {
+  width: 200px;
+  height: 230px;
+  padding: 0;
+  border: none;
+  border-radius: 25px;
+  background: #26344d;
+  box-shadow: 0 4px 12px #0006;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.galeria img {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  opacity: 0.6;
+  border-radius: 25px;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.galeria span {
+  display: block;
+  padding: 8px;
+  color: white;
+  font-size: 14px;
+}
+
+@media (hover: hover) {
+  .galeria button:hover img {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.galeria button:focus-visible {
+  outline: 3px solid #60a5fa;
+  outline-offset: 4px;
+}
+
+.galeria button:focus-visible img {
+  opacity: 1;
+}
+
+.ampliacao {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 24px;
+  border: none;
+  background: transparent;
+  cursor: zoom-out;
+}
+
+.ampliacao[open] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ampliacao::backdrop {
+  background: rgb(0 0 0 / 85%);
+}
+
+.imagem-ampliada {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 25px;
+  box-shadow: 0 8px 30px #0008;
+}
+
+.fechar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: black;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+body.imagem-aberta {
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .galeria {
+    grid-template-columns: repeat(2, 200px);
+  }
+}
+
+@media (max-width: 500px) {
+  .galeria {
+    grid-template-columns: repeat(2, 130px);
+    gap: 12px;
+  }
+
+  .galeria button {
+    width: 130px;
+    height: 160px;
+  }
+
+  .galeria img {
+    height: 125px;
+  }
+}
+
+@media (max-width: 300px) {
+  .galeria {
+    grid-template-columns: 130px;
+  }
+}
